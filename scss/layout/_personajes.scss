@@ -1,0 +1,30 @@
+.card{
+    max-width: 100%;
+    max-height: fit-content;
+    background-color: black;
+    color: white;
+    display: flex;}
+    
+  
+
+.row{
+  border: solid;
+  border-color: red;
+}
+
+
+.card-body{
+  background-color: gray;
+  color: black;
+}
+
+  .d-block{
+    height: 300px;
+    width: 300px;
+    align-items: center;
+    
+  }
+
+  .card-body{
+    text-align: center;
+  }

@@ -1,67 +1,156 @@
-body{background-color: black;
-  color: white;}
+/*base*/
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
 
- 
+body {
+  font-family: Arial, Helvetica, sans-serif, "Times New Roman", Times, serif, Verdana;
+  background-color: black;
+  color: white;
+}
 
+/*components*/
+/*layout*/
+.title {
+  font-size: 4rem;
+  padding: 30px;
+  display: flex;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(100, 59, 59), red);
+  color: transparent;
+  background-clip: text;
+}
 
-/*personajes */
-  .card{
-    max-width: 100%;
-    max-height: fit-content;
-    background-color: black;
-    color: white;
-    display: flex;}
-    
-  
+.sub-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.row{
+.index-container {
+  display: flex;
+  flex-direction: none;
+  justify-content: left;
+  align-items: center;
+  gap: 30px;
+  display: flex;
+  min-height: 100%;
+  min-width: 100%;
+}
+.index-container img {
+  max-height: 100vh;
+  max-width: 500px;
+}
+.index-container .index-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 30px;
+  display: flex;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .index-container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
+}
+.ver-mas {
+  border: solid;
+  color: red;
+  padding: 30px;
+  text-align: center;
+}
+
+.ver-mas:hover {
+  background-color: antiquewhite;
+  transition: 0.5s;
+}
+
+.card {
+  max-width: 100%;
+  max-height: fit-content;
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+.row {
   border: solid;
   border-color: red;
 }
 
-
-.card-body{
+.card-body {
   background-color: gray;
   color: black;
 }
 
-  .d-block{
-    height: 300px;
-    width: 300px;
-    align-items: center;
-    
-  }
+.d-block {
+  height: 300px;
+  width: 300px;
+  align-items: center;
+}
 
-  .card-body{
-    text-align: center;
-  }
+.card-body {
+  text-align: center;
+}
 
+.card-enemies {
+  max-width: 100%;
+  max-height: fit-content;
+}
+.card-enemies img {
+  max-height: 500px;
+}
 
-/*secretos */
-  .card-secrets{
-    max-width: 100%;
-    max-height: fit-content;
-  }
+.enemies-content {
+  background-color: grey;
+  color: black;
+  font-size: 20px;
+}
 
-  /*galeria */
+.gallery-title {
+  text-align: center;
+}
 
-  .gallery-title{
-    text-align: center;
-  }
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-auto-rows: minmax(fit-content, auto);
+  grid-auto-flow: row;
+  gap: 10px;
+  background-color: gray;
+}
 
-  .gallery-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-auto-rows: minmax(fit-content, auto);
-    grid-auto-flow: row;
-    gap: 10px;
-    background-color: gray;
-    
-  }
+.gallery-container img {
+  width: 100%;
+  height: 300px;
+}
 
-  .gallery-container img{
-    width: 100%;
-    height: 300px;
-    }
+.card-secrets {
+  max-width: 100%;
+  max-height: fit-content;
+}
 
-  
+.secrets-content {
+  background-color: grey;
+  color: black;
+}
+
+/*mediaqueries del index*/
+
+/*# sourceMappingURL=style.css.map */
