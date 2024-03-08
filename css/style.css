@@ -7,8 +7,9 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif, "Times New Roman", Times, serif, Verdana;
-  background-color: black;
+  background-color: ninguna;
   color: white;
+  background-color: black;
 }
 
 /*components*/
@@ -26,8 +27,24 @@ body {
   background: linear-gradient(to right, rgb(100, 59, 59), red);
   color: transparent;
   background-clip: text;
+  animation-name: aparicion;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.5s;
 }
 
+@keyframes aparicion {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    color: rgb(197, 11, 11);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .sub-title {
   display: flex;
   align-items: center;
@@ -44,11 +61,17 @@ body {
   min-height: 100%;
   min-width: 100%;
 }
-.index-container img {
+
+img {
   max-height: 100vh;
   max-width: 500px;
+  animation-name: images;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1.7s;
 }
-.index-container .index-content {
+
+.index-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,16 +92,46 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 720px) {
+  .index-content {
+    font-size: 1.5rem;
+  }
+}
+@keyframes images {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .ver-mas {
   border: solid;
   color: red;
   padding: 30px;
   text-align: center;
+  font-size: 17px;
+}
+.ver-mas:hover {
+  background-color: rgb(238, 148, 148);
+  transition: 0.5s;
+  transform: scale(1.1);
 }
 
-.ver-mas:hover {
-  background-color: antiquewhite;
-  transition: 0.5s;
+.btn-one {
+  background-color: rgb(155, 60, 60);
+}
+
+.btn-two {
+  background-color: rgb(230, 105, 105);
+}
+
+.btn-three {
+  background-color: rgb(87, 7, 7);
+}
+
+.btn-four {
+  background-color: rgb(51, 3, 3);
 }
 
 .card {
@@ -109,11 +162,16 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 720px) {
+  .card-body {
+    font-size: 15px;
+  }
+}
 .card-enemies {
   max-width: 100%;
   max-height: fit-content;
 }
-.card-enemies img {
+.card-enemies .col img {
   max-height: 500px;
 }
 
@@ -123,6 +181,11 @@ body {
   font-size: 20px;
 }
 
+@media screen and (max-width: 720px) {
+  .enemies-content {
+    font-size: 15px;
+  }
+}
 .gallery-title {
   text-align: center;
 }
@@ -151,6 +214,11 @@ body {
   color: black;
 }
 
+@media screen and (max-width: 720px) {
+  .secrets-content {
+    font-size: 15px;
+  }
+}
 /*mediaqueries del index*/
 
 /*# sourceMappingURL=style.css.map */

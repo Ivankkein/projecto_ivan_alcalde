@@ -1,3 +1,16 @@
+$festividad:ninguna;
+
 body{font-family: Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif, Verdana;
-    background-color: black;
-    color: white;}
+    background-color: $festividad;
+    color: white;
+
+    @if $festividad == halloween{
+        background-color:orange;
+     } @else if  $festividad == navidad{
+            background-color: azure;
+            color: black;
+        } @else if $festividad == ninguna{
+            background-color:black
+        } @else{
+            background-color: blue
+        }}

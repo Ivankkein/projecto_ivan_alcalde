@@ -6,6 +6,8 @@
     gap: $gap;
 }
 
+
+
 .title{
     font-size: 4rem;
     padding: 30px;
@@ -15,7 +17,20 @@
     background: linear-gradient(to right,rgb(100, 59, 59), red);
     color: transparent;
     background-clip: text;
+    animation-name: aparicion;
+        animation-iteration-count:1;
+        animation-timing-function: ease-in;
+        animation-duration: 1.5s;
 }
+
+@keyframes aparicion{
+    0%{opacity: 0;;}
+
+    50%{opacity: 1;
+    color: rgb(197, 11, 11);}
+    
+    100%{opacity: 1;}
+  }
 
 .sub-title{
     display: flex;
@@ -29,9 +44,17 @@
     min-height: 100%;
     min-width: 100%;
 
+    
+}
+
     img{
         max-height: 100vh;
         max-width: 500px;
+
+        animation-name: images;
+        animation-iteration-count:1;
+        animation-timing-function: ease-in;
+        animation-duration: 1.7s;
     }
 
 
@@ -40,7 +63,7 @@
         font-size: 30px;
         display: flex;
         text-align: center;}
-    }
+    
 @media(max-width: 700px){
     .index-container{
         flex-direction: column;
@@ -53,12 +76,42 @@
     
 }
 
+@media screen and (max-width: 720px) {
+    .index-content{font-size: 1.5rem;
+     
+}
+}
+
+@keyframes images{
+    0%{opacity: 0;;}
+
+     
+    100%{opacity: 1;}
+}
 .ver-mas{border: solid;
     color: red;
 padding: 30px;
-text-align: center;}
+text-align: center;
+font-size: 17px;
+ 
 
-.ver-mas:hover{
-    background-color: antiquewhite;
+&:hover{
+    background-color: rgb(238, 148, 148);
     transition: 0.5s;
+    transform: scale(1.1)
+}}
+
+$color:(
+    one: rgb(155, 60, 60),
+    two: rgb(230, 105, 105),
+    three: rgb(87, 7, 7),
+    four: rgb(51, 3, 3)
+
+);
+
+@each $key, $value in $color{
+    .btn-#{$key}{
+    background-color: $value;
+
+}
 }
